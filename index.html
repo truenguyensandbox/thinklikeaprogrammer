@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Think Like a Programmer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <header>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="tlphome.png" alt="Think Like a Programmer" />
+      <div class="hero-text">
+      </div>
+    </section>
+    <br>
+    <br>
+
+    <!-- Lesson Sections -->
+    <section class="lesson-card card" id="intro">
+      <center><h2>Welcome!</h2>
+      <p>Learn the basics of programming using fun, colorful blocks and real code concepts.</p></center>
+    </section>
+
+<section class="lesson-card card" id="variables">
+  <h3>Variables</h3>
+  <p>Variables store data values using <code>let</code>, <code>const</code>, or <code>var</code>.</p>
+  <button onclick="toggleExample('variables-example')">Show Example</button>
+  <pre id="variables-example" class="code-example" style="display:none;">
+    <span class="tooltip" data-tooltip="Declares a variable with block scope.">let</span> name = "Ada";
+    <span class="tooltip" data-tooltip="Prints messages to the browser console.">console.log</span>(name);
+  </pre>
+  <button class="complete-btn">Mark as Complete</button>
+</section>
+<section class="lesson-card card" id="loops">
+  <h3>Loops</h3>
+  <p>Loops let you run code multiple times. A <code>for</code> loop repeats code for a specified number of iterations.</p>
+  <button onclick="toggleExample('loops-example')">Show Example</button>
+  <pre id="loops-example" class="code-example" style="display:none;">
+    <span class="tooltip" data-tooltip="Declares a variable with block scope.">for</span> (<span class="tooltip" data-tooltip="Initializes a counter variable.">let</span> i = 0; i < 5; i++) {
+      <span class="tooltip" data-tooltip="Prints messages to the browser console.">console.log</span>(i);
+    }
+  </pre>
+  <button class="complete-btn">Mark as Complete</button>
+</section>
+<section class="lesson-card card" id="functions">
+  <h3>Functions</h3>
+  <p>Functions are reusable blocks of code. You can define a function and call it multiple times to execute the same task.</p>
+  <button onclick="toggleExample('functions-example')">Show Example</button>
+  <pre id="functions-example" class="code-example" style="display:none;">
+    <span class="tooltip" data-tooltip="Defines a reusable block of code.">function</span> greet(name) {
+      <span class="tooltip" data-tooltip="Prints messages to the browser console.">console.log</span>("Hello " + name);
+    }
+    greet("Ada");
+  </pre>
+  <button class="complete-btn">Mark as Complete</button>
+</section>
+<section class="lesson-card card" id="arrays">
+  <h3>Arrays</h3>
+  <p>Arrays store multiple values in one variable. You can access elements using indices.</p>
+  <button onclick="toggleExample('arrays-example')">Show Example</button>
+  <pre id="arrays-example" class="code-example" style="display:none;">
+    <span class="tooltip" data-tooltip="Declares a variable with block scope.">let</span> colors = ["red", "blue", "green"];
+    <span class="tooltip" data-tooltip="Prints messages to the browser console.">console.log</span>(colors[0]);
+  </pre>
+  <button class="complete-btn">Mark as Complete</button>
+</section>
+<section class="lesson-card card" id="objects">
+  <h3>Objects</h3>
+  <p>Objects group related data and functions together. They store data in key-value pairs.</p>
+  <button onclick="toggleExample('objects-example')">Show Example</button>
+  <pre id="objects-example" class="code-example" style="display:none;">
+    <span class="tooltip" data-tooltip="Declares a variable with block scope.">let</span> person = {
+      name: "Ada",
+      greet: <span class="tooltip" data-tooltip="Defines a reusable block of code.">function</span>() {
+        <span class="tooltip" data-tooltip="Prints messages to the browser console.">console.log</span>("Hi " + this.name);
+      }
+    };
+    person.greet();
+  </pre>
+  <button class="complete-btn">Mark as Complete</button>
+</section>
+<section class="lesson-card card" id="events">
+  <h3>Events</h3>
+  <p>Events allow you to trigger actions when users interact with elements on the page (like clicking a button).</p>
+  <button onclick="toggleExample('events-example')">Show Example</button>
+  <pre id="events-example" class="code-example" style="display:none;">
+    <span class="tooltip" data-tooltip="Adds an event listener to an element.">document</span>.getElementById("myBtn").addEventListener("click", <span class="tooltip" data-tooltip="Defines a reusable block of code.">function</span>() {
+      <span class="tooltip" data-tooltip="Prints messages to the browser console.">console.log</span>("Button clicked!");
+    });
+  </pre>
+  <button class="complete-btn">Mark as Complete</button>
+</section>
+<section class="lesson-card card" id="conditionals">
+  <h3>Conditionals</h3>
+  <p>Conditionals allow you to execute code based on certain conditions. If a condition is true, one block of code is executed; otherwise, another block is executed.</p>
+  <button onclick="toggleExample('conditionals-example')">Show Example</button>
+  <pre id="conditionals-example" class="code-example" style="display:none;">
+    <span class="tooltip" data-tooltip="Declares a variable with block scope.">let</span> age = 18;
+    <span class="tooltip" data-tooltip="Executes code if the condition is true.">if</span> (age >= 18) {
+      <span class="tooltip" data-tooltip="Prints messages to the browser console.">console.log</span>("You're an adult.");
+    } <span class="tooltip" data-tooltip="Executes if the if-condition is false.">else</span> {
+      <span class="tooltip" data-tooltip="Prints messages to the browser console.">console.log</span>("You're a minor.");
+    }
+  </pre>
+  <button class="complete-btn">Mark as Complete</button>
+</section>
+<section class="lesson-card card" id="boolean-logic">
+  <h3>Boolean Logic</h3>
+  <p>Booleans are true/false values. Use logical operators like <code>&&</code> (and), <code>||</code> (or), and <code>!</code> (not) to combine them.</p>
+  <button onclick="toggleExample('boolean-logic-example')">Show Example</button>
+  <pre id="boolean-logic-example" class="code-example" style="display:none;">
+    <span class="tooltip" data-tooltip="Declares a variable with block scope.">let</span> hasID = <span class="tooltip" data-tooltip="A boolean value meaning yes, or confirmed.">true</span>;
+    <span class="tooltip" data-tooltip="Declares a variable with block scope.">let</span> isSober = <span class="tooltip" data-tooltip="A boolean value meaning no, or not true.">false</span>;
+
+    <span class="tooltip" data-tooltip="Executes code if the condition is true.">if</span> (hasID && isSober) {
+      <span class="tooltip" data-tooltip="Prints messages to the browser console.">console.log</span>("You can enter.");
+    } <span class="tooltip" data-tooltip="Executes if the if-condition is false.">else</span> {
+      <span class="tooltip" data-tooltip="Prints messages to the browser console.">console.log</span>("Access denied.");
+    }
+  </pre>
+  <button class="complete-btn">Mark as Complete</button>
+</section>
+<section class="lesson-card card" id="data-types">
+  <h3>Data Types</h3>
+  <p>Data types specify what kind of value a variable holds. Common types include strings, numbers, booleans, arrays, and objects.</p>
+  <button onclick="toggleExample('data-types-example')">Show Example</button>
+  <pre id="data-types-example" class="code-example" style="display:none;">
+    <span class="tooltip" data-tooltip="Declares a variable with block scope.">let</span> name = "Ada";         // string
+    <span class="tooltip" data-tooltip="Declares a variable with block scope.">let</span> age = 31;              // number
+    <span class="tooltip" data-tooltip="Declares a variable with block scope.">let</span> isProgrammer = <span class="tooltip" data-tooltip="A boolean value meaning yes, or confirmed.">true</span>;   // boolean
+    <span class="tooltip" data-tooltip="Declares a variable with block scope.">let</span> tools = ["JS", "HTML"]; // array
+    <span class="tooltip" data-tooltip="Declares a variable with block scope.">let</span> user = { name: "Ada" }; // object
+  </pre>
+  <button class="complete-btn">Mark as Complete</button>
+</section>
+<section class="lesson-card card" id="debugging">
+  <h3>Debugging</h3>
+  <p>Debugging helps you find and fix errors in your code. Here's an example of how to fix a missing quote error.</p>
+  <button onclick="toggleExample('debugging-example')">Show Example</button>
+  <pre id="debugging-example" class="code-example" style="display:none;">
+    // Bug: missing closing quote
+    <span class="tooltip" data-tooltip="Declares a variable with block scope.">let</span> message = "Hello;
+    <span class="tooltip" data-tooltip="Prints messages to the browser console.">console.log</span>(message);
+
+    // Fixed:
+    <span class="tooltip" data-tooltip="Declares a variable with block scope.">let</span> message = "Hello";
+    <span class="tooltip" data-tooltip="Prints messages to the browser console.">console.log</span>(message);
+  </pre>
+  <button class="complete-btn">Mark as Complete</button>
+</section>
+<section class="lesson-card card" id="comments">
+  <h3>Code Comments</h3>
+  <p>Code comments are used to explain what your code does. Single-line and multi-line comments help others understand your code.</p>
+  <button onclick="toggleExample('comments-example')">Show Example</button>
+  <pre id="comments-example" class="code-example" style="display:none;">
+    // This is a single-line comment
+    <span class="tooltip" data-tooltip="Declares a variable with block scope.">let</span> user = "Ada";
+
+    /*
+      This is a multi-line comment.
+      It explains more complex code.
+    */
+  </pre>
+  <button class="complete-btn">Mark as Complete</button>
+</section>
+<section class="lesson-card card" id="operators">
+  <h3>Operators</h3>
+  <p>Operators perform operations like addition, subtraction, multiplication, and comparisons.</p>
+  <button onclick="toggleExample('operators-example')">Show Example</button>
+  <pre id="operators-example" class="code-example" style="display:none;">
+    <span class="tooltip" data-tooltip="Declares a variable with block scope.">let</span> a = 10;
+    <span class="tooltip" data-tooltip="Declares a variable with block scope.">let</span> b = 5;
+
+    <span class="tooltip" data-tooltip="Prints messages to the browser console.">console.log</span>(a + b);   // 15
+    <span class="tooltip" data-tooltip="Prints messages to the browser console.">console.log</span>(a === b); // false
+  </pre>
+  <button class="complete-btn">Mark as Complete</button>
+</section>
+<br>
+<br>
+
+    <!-- Additional Sections Here -->
+  </main>
+
+  <!-- Scroll to Top Button -->
+  <button id="topBtn" onclick="scrollToTop()">↑</button>
+
+  <script src="main.js"></script>
+</body>
+<!-- Footer Section -->
+<footer>
+  <div class="footer-content">
+    <p>Connect with me:</p>
+    <ul>
+      <li><a href="https://www.linkedin.com/nguyentm99" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+      <li><a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+    </ul>
+  </div>
+</footer>
+
+</html>

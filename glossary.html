@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glossary – Think Like a Programmer</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <style>
+    body {
+      padding: 2rem;
+    }
+    .glossary {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .glossary h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .term {
+      background-color: #f0f0f0;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-left: 6px solid #8338EC;
+      border-radius: 5px;
+    }
+    .term strong {
+      color: #FB5607;
+    }
+  </style>
+</head>
+<body>
+  <div class="glossary">
+    <input type="text" id="searchBox" placeholder="Search terms..." style="width: 100%; padding: 0.75rem; font-size: 1rem; margin-bottom: 2rem; border: 1px solid #ccc; border-radius: 5px;" oninput="filterGlossary()" />
+
+    <h1>🧠 Glossary of Terms</h1>
+    <div class="term"><strong>let</strong>: Declares a variable with block scope.</div>
+    <div class="term"><strong>if</strong>: Executes code if the condition is true.</div>
+    <div class="term"><strong>else</strong>: Executes if the if-condition is false.</div>
+    <div class="term"><strong>function</strong>: Defines a reusable block of code.</div>
+    <div class="term"><strong>return</strong>: Sends a value back from a function.</div>
+    <div class="term"><strong>true</strong>: A boolean value meaning yes, or confirmed.</div>
+    <div class="term"><strong>false</strong>: A boolean value meaning no, or not true.</div>
+    <div class="term"><strong>===</strong>: Strict equality — checks value and type.</div>
+    <div class="term"><strong>console.log</strong>: Prints messages to the browser console.</div>
+    <p style="text-align:center; margin-top: 2rem;"><a href="index.html">← Back to Lessons</a></p>
+  </div>
+
+  <script>
+    function filterGlossary() {
+      const query = document.getElementById('searchBox').value.toLowerCase();
+      const terms = document.querySelectorAll('.term');
+      terms.forEach(term => {
+        const text = term.textContent.toLowerCase();
+        term.style.display = text.includes(query) ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
